@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio/CV Webpage</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome for Icons -->
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-size: 16px;
+            font-family: Helvetica, sans-serif;
+            font-weight: 400;
+            line-height: 1.8em;
+            color: #666;
+        }
+
+        a {
+            color: #fff;
+        }
+
+        a:visited {
+            color: #fff;
+        }
+
+        a:hover {
+            color: #ddd;
+        }
+
+        #navbar a {
+            color: #fff;
+        }
+
+        #navbar a:visited {
+            color: #fff;
+        }
+
+        #navbar a:hover {
+            color: #ddd;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        h5 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .header {
+            background-color: #000;
+        }
+
+        .center-justified {
+            text-align: justify;
+            margin: 0 auto;
+            max-width: 60em;
+        }
+
+        .pimg1, .pimg2, .pimg3 {
+            position: relative;
+            width: 100%;
+            height: auto;
+            opacity: 0.80;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .pimg1 {
+            background-image: url(https://images.pexels.com/photos/257897/pexels-photo-257897.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+            min-height: 100%;
+        }
+
+        .pimg2 {
+            background-image: url(https://images.pexels.com/photos/545331/pexels-photo-545331.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+            min-height: 50%;
+        }
+
+        .pimg3 {
+            background-image: url(https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+            min-height: 50%;
+        }
+
+        .section {
+            text-align: center;
+            padding: 50px 80px;
+        }
+
+        .section-light {
+            background-color: #404f4f;
+            color: #fff;
+        }
+
+        .section-dark {
+            background-color: #282e34;
+            color: #ddd;
+        }
+
+        .ptext1 {
+            position: absolute;
+            top: 80%;
+            width: 100%;
+            text-align: center;
+            color: #ffffff;
+            font-size: 27px;
+            font-weight: 600;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+        }
+
+        .ptext2 {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #a5a5a5;
+            font-size: 27px;
+            font-weight: 800;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+
+        .ptext3 {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+            color: #c6c6c6;
+            font-size: 27px;
+            font-weight: 600;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+        }
+
+        .thumbnail {
+            border-radius: 10px;
+            width: 250px;
+        }
+
+        #navbar {
+            text-align: center;
+            padding: 20px;
+            background-color: #282e34;
+            color: #ddd;
+            top: 0;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            border-style: solid;
+            border-color: #a1a0b2;
+            border-width: 3px;
+            border-radius: 10px;
+            opacity: 0.90;
+        }
+
+        img:hover {
+            box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+            font-size: 20px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .skills-list li:hover {
+            transform: scale(1.1);
+            color: #00bcd4;
+        }
+
+        .skills-list i {
+            font-size: 50px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .skills-list li span {
+            display: block;
+            font-size: 18px;
+            color: #ddd;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #282e34;
+            color: #ddd;
+            padding: 10px;
+        }
+
+        @media (max-width: 568px) {
+            .pimg1, .pimg2, .pimg3 {
+                background-attachment: scroll;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="home"></div>
+    <nav id="navbar">
+        <div class="row">
+            <div class="col"><a href="#home">Home</a></div>
+            <div class="col"><a href="#aboutme">About Me</a></div>
+            <div class="col"><a href="#projects">Projects</a></div>
+            <div class="col"><a href="#skills">Skills</a></div>
+            <div class="col"><a href="#contactme">Contact</a></div>
+        </div>
+    </nav>
+
+    <div class="pimg1" id="welcome-section">
+        <div class="ptext1">
+            <header>
+                <h1>Daranidaran: Web Developer</h1>
+            </header>
+        </div>
+    </div>
+
+    <section class="section section-dark" id="aboutme">
+        <h2>About Me</h2>
+        <p class="center-justified">As a passionate Software Developer, I specialize in both front-end and back-end technologies, focusing on creating holistic web solutions that meet real-world needs. With a strong ability to leverage AWS services, I design and implement scalable and secure applications tailored to ensure seamless user experiences. My journey from initial concept through to deployment allows me to transform innovative ideas into high-performance web applications that are not just functional but also impactful.</p>
+    </section>
+
+    <div class="pimg2" id="projects">
+        <div class="ptext2">
+            <h2>Experience & Projects</h2>
+        </div>
+    </div>
+
+    <section class="section section-dark">
+        <h2>My Projects</h2>
+        <h1>(1) Crop Disease Prediction and Management System</h1>
+        <h2>Apr 2023 - Nov 2023</h2>
+        <p>This web application uses CNN to predict crop diseases from user-uploaded images, improving diagnosis speed by 70%. Key features include automated watering alarms, humidity monitoring, and tailored medicine recommendations, enhancing crop yield by 40%. By providing real-time insights and alerts, it empowers farmers to optimize their practices for sustainable agriculture.</p>
+
+        <h1>(2) Smart Traffic Management System</h1>
+        <h2>2023-2024</h2>
+        <p>This system uses sensors to optimize traffic light timings based on real-time vehicle density, reducing congestion by 50%. In areas without traffic lights, users can input their routes for navigation. It calculates the shortest paths for traffic police and emergency vehicles, minimizing travel time by 40%. Centralized management allows real-time monitoring, enhancing road safety and efficiency. The project aims to improve urban traffic flow through automation and smart data use.</p>
+    </section>
+
+    <div class="pimg3" id="skills">
+        <div class="ptext3">
+            <h2>Skills</h2>
+        </div>
+    </div>
+
+    <section class="section section-dark">
+        <h2>My Skills</h2>
+        <ul class="skills-list">
+            <li>
+                <i class="fab fa-java"></i> <!-- Java icon -->
+                <span>Java</span>
+            </li>
+            <li>
+                <i class="fab fa-java"></i> <!-- Spring Boot icon -->
+                <span>Spring Boot</span>
+            </li>
+            <li>
+                <i class="fab fa-docker"></i> <!-- Docker icon -->
+                <span>Docker</span>
+            </li>
+            <li>
+                <i class="fab fa-aws"></i> <!-- AWS icon -->
+                <span>AWS</span>
+            </li>
+            <li>
+                <i class="fab fa-html5"></i> <!-- HTML icon -->
+                <span>HTML & CSS</span>
+            </li>
+        </ul>
+    </section>
+
+    <div class="pimg3" id="contactme">
+        <div class="ptext3">
+            <h2>Contact Me</h2>
+        </div>
+    </div>
+
+    <section class="section section-dark">
+        <h2>Get in Touch</h2>
+        <p>Email: mdaranidaran08@gmail.com</p>
+        <p>Phone: 9897546570</p>
+    </section>
+
+    <footer>&copy; Daranidaran 2024</footer>
+</body>
+
+</html>
